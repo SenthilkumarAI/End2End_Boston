@@ -6,10 +6,10 @@
 FROM python:3.9  
 
 # Copy from current location to location which i am going to name it as app
-COPY . /app  
+COPY . /app 
 
 # Use the destination of the copied location as WORKDIR
-WORKDIR  /app
+WORKDIR /app
 
 # Install all the required dependencies
 RUN pip install -r requirements.txt
@@ -25,4 +25,4 @@ EXPOSE $PORT
 # bind 0.0.0.0 ip address will be local address in the heroku cloud 
 # 1st app is name of the python file
 # 2nd app is the name of the application in the python file eg : app = Flask(__name__) # Starting point of my application
-CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:  
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app 
