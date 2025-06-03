@@ -1,5 +1,5 @@
 # Your workflow name.
-name: Deploy to heroku-24
+name: Deploy with heroku-24
 
 # Run workflow on every push to main branch.
 on:
