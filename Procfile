@@ -4,3 +4,4 @@
 # g unicorn is a python http server for WSGI Applications. g unicorn allows us to run python applications concurrently by running multiple processes.
 
 web:gunicorn app:app
+heroku ps:scale web=1
